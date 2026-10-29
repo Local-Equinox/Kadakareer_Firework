@@ -1,0 +1,25 @@
+{
+  "name": "kadakareer-firework",
+  "version": "1.0.0",
+  "description": "A simple website that produces fireworks when intereacted with it",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Local-Equinox/Kadakareer_Firework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Local-Equinox/Kadakareer_Firework/issues"
+  },
+  "homepage": "https://github.com/Local-Equinox/Kadakareer_Firework#readme",
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
