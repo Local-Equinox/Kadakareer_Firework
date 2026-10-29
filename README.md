@@ -16,16 +16,16 @@
 
 ## ✨ About The Project
 
-**Kadakareer_Firework** is a lightweight, engaging web application designed to bring personalized celebrations right to your screen[cite: 1]. 
+**Kadakareer_Firework** is a lightweight, engaging web application designed to bring personalized celebrations right to your screen. 
 
-Simply type in your name, submit, and watch as dynamic, colorful fireworks light up the screen dedicated specially to you[cite: 1]! Whether you're testing out creative web animations or sending a personalized celebratory greeting, this project delivers a fun and interactive visual treat[cite: 1].
+Simply type in your name, submit, and watch as dynamic, colorful fireworks light up the screen dedicated specially to you! Whether you're testing out creative web animations or sending a personalized celebratory greeting, this project delivers a fun and interactive visual treat.
 
 ---
 
 ## 🌟 Key Features
 
 * 🏷️ **Name Personalization:** Input any name to create a personalized show crafted specifically for you.
-* 🎆 **Interactive Fireworks:** Dynamic, colorful pyrotechnics trigger on interaction[cite: 1].
+* 🎆 **Interactive Fireworks:** Dynamic, colorful pyrotechnics trigger on interaction.
 * ⚡ **Fast & Lightweight:** Pure web implementation built for smooth animation performance across browsers.
 * 📱 **Responsive Design:** Looks great on both desktop and mobile devices.
 
@@ -33,7 +33,7 @@ Simply type in your name, submit, and watch as dynamic, colorful fireworks light
 
 ## 🗂️ Project Structure
 
-Here is a quick look at the repository layout[cite: 1]:
+Here is a quick look at the repository layout:
 
 ```text
 Kadakareer_Firework/
@@ -43,4 +43,4 @@ Kadakareer_Firework/
 ├── 📄 package.json          # Project metadata and dependencies
 ├── 📄 package-lock.json     # Locked dependency versions
 └── 📄 .gitignore            # Git ignore rules
-```[cite: 1]
+```
