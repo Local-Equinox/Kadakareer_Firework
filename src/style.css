@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 110%, #1b1840 0%, #0b0c22 45%, #04050d 100%);
+  background-color: #04050d;
+  color: #f6f3ff;
+  font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+}
+
+#stars,
+#sky {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.name-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: min(400px, calc(100vw - 32px));
+  transform: translate(-50%, -50%);
+  display: grid;
+  gap: 12px;
+  text-align: center;
+  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0s linear 0s;
+}
+
+.name-form.is-hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.05);
+  visibility: hidden;
+  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0s linear 0.8s;
+}
+
+.name-form label {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  color: #ffe6b0;
+  text-shadow: 0 0 24px rgba(255, 196, 120, 0.5);
+}
+
+.name-form input {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.name-form input:focus {
+  border-color: #ffcf7a;
+  box-shadow: 0 0 0 4px rgba(255, 207, 122, 0.15), 0 0 24px rgba(255, 207, 122, 0.2);
+}
+
+.name-form input[aria-invalid='true'] {
+  border-color: #ff8fa3;
+}
+
+.name-error {
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  color: #ffadbd;
+}
+
+.name-form button {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a0f24;
+  background: linear-gradient(110deg, #ffd27a, #ff8fc8 50%, #a98bff);
+  border: 0;
+  border-radius: 999px;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px -8px rgba(255, 140, 200, 0.6);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.name-form button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+.name-form button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.sky-name {
+  position: fixed;
+  top: 22vh;
+  left: 50%;
+  z-index: 1;
+  max-width: 92vw;
+  padding: 0 0.2em;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(3rem, 12vw, 9rem);
+  line-height: 1.1;
+  text-align: center;
+  color: #fff6e3;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 196, 120, 0.6),
+    0 2px 12px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+}
+
+.sky-name.is-wrapping {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.sky-name.is-shown {
+  opacity: 1;
+  animation: name-in 2.4s cubic-bezier(0.16, 0.84, 0.3, 1) both;
+}
+
+@keyframes name-in {
+  from {
+    transform: translateX(-50%) scale(0.85);
+  }
+  to {
+    transform: translateX(-50%) scale(1);
+  }
+}

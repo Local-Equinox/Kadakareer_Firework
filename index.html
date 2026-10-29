@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kadakareer Firework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <form id="name-form" class="name-form" novalidate>
+      <label for="name-input">Write your name</label>
+      <input id="name-input" type="text" maxlength="40" autocomplete="given-name" placeholder="Your name" />
+      <p id="name-error" class="name-error" aria-live="polite"></p>
+      <button type="submit">Light up the sky</button>
+    </form>
+
+    <h1 id="sky-name" class="sky-name" aria-live="polite"></h1>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
