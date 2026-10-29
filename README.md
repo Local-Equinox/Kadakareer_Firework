@@ -15,16 +15,6 @@
 
 ---
 
-## 📸 Demo Preview
-
-<div align="center">
-  <!-- INSERT YOUR SCREENSHOT OR GIF HERE -->
-  <img src="path/to/preview.gif" alt="Kadakareer Firework Demo" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
-  <p><i>Enter your name to launch a customized firework celebration!</i></p>
-</div>
-
----
-
 ## ✨ About The Project
 
 **Kadakareer_Firework** is a lightweight, engaging web application designed to bring personalized celebrations right to your screen[cite: 1]. 
