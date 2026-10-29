@@ -1,6 +1,3 @@
-# Kadakareer_Firework
-A simple website that produces fireworks when intereacted with it
-
 <div align="center">
 
 # 🎆 Kadakareer Firework 🎇
