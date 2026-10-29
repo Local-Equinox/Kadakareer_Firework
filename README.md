@@ -1,8 +1,5 @@
 <div align="center">
 
-<!-- OPTIONAL TOP HEADER BANNER IMAGE -->
-<img src="path/to/header-banner.png" alt="Kadakareer Firework Banner" width="100%" />
-
 # 🎆 Kadakareer Firework 🎇
 
 *A dazzling, interactive web experience that lights up your screen with personalized fireworks!*
@@ -12,16 +9,6 @@
 [![Branches](https://img.shields.io/badge/branches-2-blue?style=for-the-badge)](https://github.com/HannBella011/Kadakareer_Firework/branches)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-</div>
-
----
-
-## 📸 Demo Preview
-
-<div align="center">
-  <!-- INSERT YOUR SCREENSHOT OR GIF HERE -->
-  <img src="path/to/preview.gif" alt="Kadakareer Firework Demo" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
-  <p><i>Click or tap anywhere on the screen to trigger custom fireworks!</i></p>
 </div>
 
 ---
