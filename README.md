@@ -1,7 +1,6 @@
 <div align="center">
 
-<!-- OPTIONAL HEADER BANNER IMAGE -->
-<img src="path/to/header-banner.png" alt="Kadakareer Firework Banner" width="100%" />
+<img src="./banner.jpg" alt="Kadakareer Firework Banner" width="100%" />
 
 # 🎆 Kadakareer Firework 🎇
 
@@ -47,12 +46,3 @@ Kadakareer_Firework/
 ```[cite: 1]
 
 ---
-
-## 🚀 Getting Started
-
-To run this project locally on your machine:
-
-### 1. Clone the repository
-```bash
-git clone [https://github.com/HannBella011/Kadakareer_Firework.git](https://github.com/HannBella011/Kadakareer_Firework.git)
-cd Kadakareer_Firework
