@@ -44,5 +44,3 @@ Kadakareer_Firework/
 ├── 📄 package-lock.json     # Locked dependency versions
 └── 📄 .gitignore            # Git ignore rules
 ```[cite: 1]
-
----
