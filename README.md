@@ -21,12 +21,6 @@ Whether you're testing out creative animations or just want a burst of digital c
 
 ---
 
-## 🌐 Live Demo
-
-You can view the live site hosted on GitHub Pages:
-👉 **[Kadakareer Firework Live]([https://HannBella011.github.io/Kadakareer_Firework/](https://kadakareer-firework.vercel.app/?fbclid=IwY2xjawVP6epleHRuA2FlbQIxMQBwZG9mA3NydGMGYXBwX2lkATAAAR9eVyCI6xg9nHiEJZ-zcq7YJ_Cga-gk6UW8EWx0glXuNaKtlXND4LXKcZortg_aem_1DAIgclWT0xPmVrI8DbdeQ))**
-
----
 
 ## 🗂️ Project Structure
 
