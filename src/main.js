@@ -38,11 +38,11 @@ function fire(x, y, p) {
 
 // Intensity ramps up over the minute, ending in a dense finale.
 function phase(t) {
-  if (t < 5) return { gap: 1.3, scale: [0.55, 0.75], multi: 0 };
-  if (t < 20) return { gap: 0.85, scale: [0.7, 1.0], multi: 0.15 };
-  if (t < 40) return { gap: 0.6, scale: [0.8, 1.2], multi: 0.3 };
-  if (t < 50) return { gap: 0.48, scale: [0.9, 1.35], multi: 0.35 };
-  return { gap: 0.22, scale: [0.9, 1.5], multi: 0.5 };
+  if (t < 5) return { gap: 0.9, scale: [0.65, 0.9], multi: 0.1 };
+  if (t < 20) return { gap: 0.6, scale: [0.8, 1.15], multi: 0.3 };
+  if (t < 40) return { gap: 0.42, scale: [0.9, 1.3], multi: 0.45 };
+  if (t < 50) return { gap: 0.32, scale: [1.0, 1.45], multi: 0.55 };
+  return { gap: 0.14, scale: [1.0, 1.6], multi: 0.7 };
 }
 
 function startShow(name) {
@@ -68,7 +68,8 @@ sky.onFrame = (dt) => {
 
   if (t >= show.next && t < LAUNCH_CUTOFF) {
     const ph = phase(t);
-    const count = Math.random() < ph.multi ? 2 : 1;
+    // Salvos of up to three shells, more likely as the show builds.
+    const count = 1 + (Math.random() < ph.multi) + (Math.random() < ph.multi * 0.5);
     for (let i = 0; i < count; i++) {
       const { x, y } = target();
       fire(x, y, payload(rand(...ph.scale), t < 5 ? pick(['peony', 'ring']) : undefined));
@@ -82,8 +83,8 @@ sky.onFrame = (dt) => {
     const ex = sky.exclusion;
     const y = Math.min(sky.height * 0.66, (ex ? ex.bottom : sky.height * 0.35) + 150 * sky.scale);
     fire(sky.width / 2, y, { pattern: 'text', text: Array.from(nameEl.textContent)[0].toUpperCase(), colors: ['#ffd27a', '#ffffff'], scale: 1.1 });
-    for (let i = 0; i < 6; i++) {
-      fire(sky.width * (0.1 + i * 0.16), rand(0.1, 0.3) * sky.height, payload(1.5));
+    for (let i = 0; i < 8; i++) {
+      fire(sky.width * (0.08 + i * 0.12), rand(0.1, 0.3) * sky.height, payload(1.6));
     }
   }
 

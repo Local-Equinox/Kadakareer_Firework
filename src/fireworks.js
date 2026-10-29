@@ -157,7 +157,7 @@ export class Sky {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
     this.scale = clamp(Math.min(this.width, this.height) / 760, 0.5, 1.35);
-    this.maxParticles = this.width * this.height < 600 * 900 ? 1600 : 3200;
+    this.maxParticles = this.width * this.height < 600 * 900 ? 2600 : 5200;
   }
 
   // Stars are stored in normalized coordinates so resizes never reshuffle them.
@@ -234,7 +234,7 @@ export class Sky {
       lag: 0.3,
       color: o.colors[0],
       color2: null,
-      glow: Math.random() < 0.12,
+      glow: Math.random() < 0.2,
       flicker: 0,
       seed: rand(0, TAU),
       ember: 0,
@@ -269,16 +269,16 @@ export class Sky {
       scale,
       life: payload.life ?? 1,
       R: 150 * this.scale * scale,
-      n: Math.max(8, Math.min(Math.round(85 * scale * (payload.density ?? 1)), Math.floor(room * 0.7))),
+      n: Math.max(8, Math.min(Math.round(120 * scale * (payload.density ?? 1)), Math.floor(room * 0.7))),
       text: payload.text,
     };
     (PATTERNS[payload.pattern] || PATTERNS.peony).call(this, x, y, o);
 
-    const flashSize = o.R * (this.calm ? 0.35 : 0.6);
+    const flashSize = o.R * (this.calm ? 0.35 : 0.9);
     this.flashes.push({ x, y, size: flashSize, life: 0.22, max: 0.22, color: o.colors[0] });
-    if (this.lights.length < 6) {
+    if (this.lights.length < 8) {
       const r = o.R * 2.6;
-      this.lights.push({ x, y, r, color: o.colors[0], alpha: Math.min(0.12, 0.07 * scale) * (this.calm ? 0.5 : 1), life: 0.9, max: 0.9 });
+      this.lights.push({ x, y, r, color: o.colors[0], alpha: Math.min(0.2, 0.11 * scale) * (this.calm ? 0.5 : 1), life: 0.9, max: 0.9 });
     }
     this.onBurst?.({ x, y, scale, color: o.colors[0], pattern: payload.pattern });
   }
@@ -478,9 +478,9 @@ export class Sky {
     for (const f of this.flashes) {
       const r = f.life / f.max;
       const s = f.size * (1.3 - r * 0.3);
-      fx.globalAlpha = r * 0.5;
+      fx.globalAlpha = r * 0.75;
       fx.drawImage(glowSprite('#fff6e8'), f.x - s / 2, f.y - s / 2, s, s);
-      fx.globalAlpha = r * 0.35;
+      fx.globalAlpha = r * 0.5;
       fx.drawImage(glowSprite(f.color), f.x - s, f.y - s, s * 2, s * 2);
     }
 
